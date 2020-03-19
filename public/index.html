@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class= 'navbar'>
+        <div class ='tool' >
+            <img class="pencil"src="./NewIcons/Black_Pencil.svg" height="100px" alt="Pencil" onclick="handleToolChange('pencil')" srcset="">
+            <div class ="pencilOptions">
+                <div class ="pencilSize">
+                    <input type="range" name="" id="pen-size" min="5" max="40" value="5">
+                </div>
+                <div class="pencilColour">
+                    <div class="colors-red" onclick="colorchange('red')"></div>
+                    <div class="colors-green" onclick="colorchange('green')"></div>
+                    <div class="colors-blue" onclick="colorchange('blue')"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class ='tool'>
+            <img class="eraser"src="./NewIcons/Eraser.svg" height="100px" alt="eraser" onclick="handleToolChange('eraser')"srcset="">
+            <div class="eraserOptions">
+                <div class="eraserSize">
+                    <input type="range" id='eraser-size' min='5' max='40' value='5'>
+                </div>
+            </div>
+        </div>
+        <div class="tool">
+            <a  href="" download="my_painting.png">
+                <img src="./NewIcons/Download.svg" height="100px" alt="" srcset="">
+            </a>
+        </div>
+        
+        <div class="tool">
+            <input type="file" accept="file_extension|image/*" class="image-upload">
+        </div>
+        <div class="tool" >>
+            <img src="./NewIcons/StickyNote.svg" onclick="createSticky()" alt="" srcset="">
+        </div>
+            
+        </div>
+        
+    </div>
+    <canvas class="board" height="auto" width="1920">
+
+    </canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js " crossorigin ></script>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+    <script src="sticky.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>
