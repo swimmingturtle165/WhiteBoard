@@ -1,5 +1,5 @@
 // const io= require('socket.io')(server);
-const socket=io.connect("http://localhost:3000");
+const socket=io.connect("https://sachitwhiteboard.herokuapp.com/");
 
 const board = document.querySelector(".board");
 const rect=board.getBoundingClientRect();
